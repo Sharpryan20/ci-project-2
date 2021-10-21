@@ -79,3 +79,22 @@ body {
     display: none;
 }
 
+#score {
+    color: green;
+    font-weight: bold;
+}
+
+.scores {
+    display: inline-block;
+    padding: 15px;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+.score {
+    text-align: center;
+}
+
