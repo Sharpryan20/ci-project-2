@@ -16,11 +16,6 @@ body {
     background: url('../images/piano.jpg');
 }
 
-#heading {
-    position: absolute;
-    margin-bottom: 50%;
-}
-
 .container {
     width: 900px;
     max-width: 80%;
