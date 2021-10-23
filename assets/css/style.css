@@ -107,5 +107,5 @@ body {
 
 .rules-container {
     position: absolute;
-    margin-top: 25px;
+    display: none;
 }
