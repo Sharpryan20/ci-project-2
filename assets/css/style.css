@@ -16,7 +16,7 @@ body {
     background: url('../images/piano.jpg');
 }
 
-.container, .rules-container {
+.container, #rules-container {
     width: 900px;
     max-width: 80%;
     border-radius: 10px;
@@ -97,15 +97,25 @@ body {
     text-align: center;
 }
 
-#ruless {
-    text-align: center;
-}
 
 #ruless ul {
     list-style: none;
 }
 
-.rules-container {
+#rules-container {
     position: absolute;
     display: none;
+}
+
+#rules-heading {
+    display: flex;
+    justify-content: center; 
+}
+
+#rules-heading .btn-cross {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: larger;
+    cursor: pointer;
 }

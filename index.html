@@ -22,22 +22,21 @@
                 <button class="btn">Answer 3</button>
                 <button class="btn">Answer 4</button>
             </div>
+            <div class="score">
+                <p class="scores">Correct Answers: <span id="score">0</span></p>
+            </div>
         </div>
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
             <button id="rules-btn" class="rules-btn btn"> Rules</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
-        <div class="score hide">
-            <p class="scores">Correct Answers: <span id="score">0</span></p>
-            <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-        </div>
     </div>
 
-    <div class="rules-container">
+    <div id="rules-container">
         <div id="rules-heading">
             <h1>Rules</h1>
-            <button>cross<i class="fa-solid fa-xmark"></i></button>
+            <span class="close">&times;</span>
         </div>
         <div id="ruless">
             <ul id="rules-list">
@@ -55,6 +54,6 @@
     </div>
 
     <script src="assets/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/9ad3f147a5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
