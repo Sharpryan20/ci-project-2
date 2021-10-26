@@ -11,6 +11,10 @@ const questionElement = document.getElementById('question')
 const answerButtons = document.getElementById('answer-buttons')
 
 startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+    currentQuestion++
+    nextQuestion()
+})
 
 rulesButton.onclick = function() {
     rulesContainer.style.display = 'block';
@@ -57,7 +61,30 @@ function resetState() {
 }
 
 function selectAnswer(e) {
-    
+    const selectButton = e.target
+    const correct = selectButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtons.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (jumble.length > currentQuestion + 1) {
+        nextButton.classList.remove('hide') 
+    } else {
+        startButton.innerText = "Results"
+        startButton.classList.remove('hide')
+    }
+}
+
+function clearStatusClass(element) {
+   element.classList.remove('correct')
+   element.classList.remove('wrong') 
+}
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    }
 }
 
 const questions = [
@@ -69,5 +96,50 @@ const questions = [
             { text:"Don't stop believing", correct: false},
             { text:'I want to know what love is', correct: false}
         ]
-    }
+    },
+    {
+        question: 'What song are these lyrics from? "...every now and then I get a little bit lonely"' ,
+        answers: [
+            { text:'Total eclipse of the heart', correct: true},
+            { text:'Take on me', correct: false},
+            { text:"Billie Jean", correct: false},
+            { text:'Tainted Love', correct: false}
+        ]
+    },
+    {
+        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
+        answers: [
+            { text:'Girls Just Want to Have fun', correct: true},
+            { text:'Living on a Prayer', correct: false},
+            { text:"Don't stop believing", correct: false},
+            { text:'I want to know what love is', correct: false}
+        ]
+    },
+    {
+        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
+        answers: [
+            { text:'Girls Just Want to Have fun', correct: true},
+            { text:'Living on a Prayer', correct: false},
+            { text:"Don't stop believing", correct: false},
+            { text:'I want to know what love is', correct: false}
+        ]
+    },
+    {
+        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
+        answers: [
+            { text:'Girls Just Want to Have fun', correct: true},
+            { text:'Living on a Prayer', correct: false},
+            { text:"Don't stop believing", correct: false},
+            { text:'I want to know what love is', correct: false}
+        ]
+    },
+    {
+        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
+        answers: [
+            { text:'Girls Just Want to Have fun', correct: true},
+            { text:'Living on a Prayer', correct: false},
+            { text:"Don't stop believing", correct: false},
+            { text:'I want to know what love is', correct: false}
+        ]
+    },
 ]

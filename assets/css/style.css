@@ -84,6 +84,14 @@ body {
     padding: 15px;
 }
 
+.correct {
+
+}
+
+.wrong {
+
+}
+
 #incorrect {
     color: red;
     font-weight: bold;
