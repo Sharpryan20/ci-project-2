@@ -85,11 +85,15 @@ body {
 }
 
 .correct {
-
+    background-color: green;
 }
 
 .wrong {
+    background-color: red;
+}
 
+.wrong, .correct {
+    border: 2px solid white;
 }
 
 #incorrect {

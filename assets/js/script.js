@@ -69,6 +69,7 @@ function selectAnswer(e) {
     })
     if (jumble.length > currentQuestion + 1) {
         nextButton.classList.remove('hide') 
+        increaseScore()
     } else {
         startButton.innerText = "Results"
         startButton.classList.remove('hide')
@@ -84,8 +85,17 @@ function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
     }
 }
+
+function increaseScore() {
+    
+    let currentScore = parseInt(document.getElementById('score').innerText)
+    document.getElementById('score').innerText = ++currentScore;
+}
+
 
 const questions = [
     {
@@ -100,46 +110,37 @@ const questions = [
     {
         question: 'What song are these lyrics from? "...every now and then I get a little bit lonely"' ,
         answers: [
-            { text:'Total eclipse of the heart', correct: true},
             { text:'Take on me', correct: false},
             { text:"Billie Jean", correct: false},
+            { text:'Total eclipse of the heart', correct: true},
             { text:'Tainted Love', correct: false}
         ]
     },
     {
-        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
+        question: 'What song are these lyrics from? "...Were no strangers to love"' ,
         answers: [
-            { text:'Girls Just Want to Have fun', correct: true},
-            { text:'Living on a Prayer', correct: false},
-            { text:"Don't stop believing", correct: false},
-            { text:'I want to know what love is', correct: false}
+            { text:'All Night Long', correct: false},
+            { text:'Never Gonna Give You Up', correct: true},
+            { text:"West End Girls", correct: false},
+            { text:'Love Shack', correct: false}
         ]
     },
     {
-        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
+        question: 'Who sung this song? "...Karma, karma, karma, karma, karma chameleon"' ,
         answers: [
-            { text:'Girls Just Want to Have fun', correct: true},
-            { text:'Living on a Prayer', correct: false},
-            { text:"Don't stop believing", correct: false},
-            { text:'I want to know what love is', correct: false}
+            { text:'Karma Chameleon', correct: false},
+            { text:'Michael Jackson', correct: false},
+            { text:"U2", correct: false},
+            { text:'Culture Club', correct: true}
         ]
     },
     {
-        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
+        question: 'Who sung this song? "...Pour some sugar on me"' ,
         answers: [
-            { text:'Girls Just Want to Have fun', correct: true},
-            { text:'Living on a Prayer', correct: false},
-            { text:"Don't stop believing", correct: false},
-            { text:'I want to know what love is', correct: false}
-        ]
-    },
-    {
-        question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
-        answers: [
-            { text:'Girls Just Want to Have fun', correct: true},
-            { text:'Living on a Prayer', correct: false},
-            { text:"Don't stop believing", correct: false},
-            { text:'I want to know what love is', correct: false}
+            { text:'Def Leppard', correct: true},
+            { text:'Phil Collins', correct: false},
+            { text:"Rick Astley", correct: false},
+            { text:'Simple Minds', correct: false}
         ]
     },
 ]
