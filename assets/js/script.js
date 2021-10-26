@@ -10,6 +10,8 @@ let jumble, currentQuestion
 const questionElement = document.getElementById('question')
 const answerButtons = document.getElementById('answer-buttons')
 
+let incorrectAnswer
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestion++
@@ -73,6 +75,7 @@ function selectAnswer(e) {
     } else {
         startButton.innerText = "Results"
         startButton.classList.remove('hide')
+        incorrectAnswer = increaseScore() - 1;
     }
 }
 
