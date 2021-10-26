@@ -1,6 +1,7 @@
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionContainer = document.getElementById('question-container')
+const resultsButton = document.getElementById('results-btn')
 
 const rulesContainer  = document.getElementById('rules-container');
 const rulesButton = document.getElementById('rules-btn');
@@ -9,8 +10,6 @@ const span = document.getElementsByClassName('close')[0];
 let jumble, currentQuestion
 const questionElement = document.getElementById('question')
 const answerButtons = document.getElementById('answer-buttons')
-
-let incorrectAnswer
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -73,9 +72,7 @@ function selectAnswer(e) {
         nextButton.classList.remove('hide') 
         increaseScore()
     } else {
-        startButton.innerText = "Results"
-        startButton.classList.remove('hide')
-        incorrectAnswer = increaseScore() - 1;
+        resultsButton.classList.remove('hide')
     }
 }
 
