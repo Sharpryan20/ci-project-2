@@ -1,4 +1,5 @@
 const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
 const questionContainer = document.getElementById('question-container')
 
 const rulesContainer  = document.getElementById('rules-container');
@@ -30,6 +31,7 @@ function startGame() {
 }
 
 function nextQuestion() {
+    resetState()
     showQuestion(jumble[currentQuestion])
 }
 
@@ -45,6 +47,13 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer)
         answerButtons.appendChild(button)
     })
+}
+
+function resetState() {
+    nextButton.classList.add('hide')
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild)
+    }
 }
 
 function selectAnswer(e) {
