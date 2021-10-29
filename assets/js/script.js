@@ -21,6 +21,7 @@ nextButton.addEventListener('click', () => {
     nextQuestion()
 })
 
+
 rulesButton.onclick = function() {
     rulesContainer.style.display = 'block';
 }
@@ -99,7 +100,10 @@ function setStatusClass(element, correct) {
 }
 
 function restartGame() {
-    
+    restartButton.onclick = function(event) {
+        resultsContainer.style.display = 'none';
+        startGame()
+    }
 }
 
 function incrementScore() {
