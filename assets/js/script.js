@@ -1,15 +1,19 @@
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
-const questionContainer = document.getElementById('question-container')
+const restartButton = document.getElementById('restart-btn');
+const rulesButton = document.getElementById('rules-btn');
+const answerButtons = document.getElementById('answer-buttons');
 const resultsButton = document.getElementById('results-btn')
 
+const container = document.getElementsByClassName('container')
+const questionContainer = document.getElementById('question-container');
 const rulesContainer  = document.getElementById('rules-container');
-const rulesButton = document.getElementById('rules-btn');
+const resultsContainer = document.getElementById('results-container');
+
 const span = document.getElementsByClassName('close')[0];
 
 let jumble, currentQuestion
 const questionElement = document.getElementById('question')
-const answerButtons = document.getElementById('answer-buttons')
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
@@ -23,6 +27,10 @@ rulesButton.onclick = function() {
 
 span.onclick = function(event) {
     rulesContainer.style.display = 'none';
+}
+
+resultsButton.onclick = function() {
+    resultsContainer.style.display = 'block';
 }
 
 function startGame() {
@@ -48,6 +56,7 @@ function showQuestion(question) {
         button.classList.add('btn')
         if (answer.correct) {
             button.dataset.correct = answer.correct
+            incrementScore(-1)
         }
         button.addEventListener('click', selectAnswer)
         answerButtons.appendChild(button)
@@ -87,6 +96,10 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add('wrong')
     }
+}
+
+function restartGame() {
+    
 }
 
 function incrementScore() {
