@@ -25,6 +25,10 @@ body {
     box-shadow: 5px 5px 2px wheat;
 }
 
+#heading {
+    font-size: 2em;
+}
+
 #question {
     font-size: 2.5rem;
     text-align: center;
@@ -115,8 +119,16 @@ body {
 }
 
 #rules-container {
+    font-size: 1.25rem;
+    text-align: center;
     position: absolute;
     display: none;
+}
+
+li span {
+    color: green;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #rules-heading {
