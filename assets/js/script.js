@@ -70,7 +70,6 @@ function selectAnswer(e) {
     })
     if (jumble.length > currentQuestion + 1) {
         nextButton.classList.remove('hide') 
-        increaseScore()
     } else {
         resultsButton.classList.remove('hide')
     }
@@ -96,16 +95,13 @@ function increaseScore() {
     document.getElementById('score').innerText = ++currentScore;
 }
 
-
 const questions = [
     {
         question: 'What song are these lyrics from? "...Oh momma dear, were not the fortunate ones"' ,
-        answers: [
-            { text:'Girls Just Want to Have fun', correct: true},
-            { text:'Living on a Prayer', correct: false},
-            { text:"Don't stop believing", correct: false},
-            { text:'I want to know what love is', correct: false}
-        ]
+        choice1:'Girls Just Want to Have fun',
+        choice2:'Living on a Prayer',
+        choice3:"Don't stop believing",
+        choice4:'I want to know what love is',
     },
     {
         question: 'What song are these lyrics from? "...every now and then I get a little bit lonely"' ,
@@ -144,3 +140,21 @@ const questions = [
         ]
     },
 ]
+
+acceptingAnswers = true
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if(!acceptingAnswers) return
+
+        acceptingAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset['number']
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+
+        if(classToApply === 'correct') {
+            increaseScore()
+        }
+    })
+})
