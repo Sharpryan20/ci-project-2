@@ -16,7 +16,7 @@ body {
     background: url('../images/piano.jpg');
 }
 
-.container, #rules-container {
+.container, #rules-container, #results-container {
     width: 900px;
     max-width: 80%;
     border-radius: 10px;
@@ -114,15 +114,15 @@ body {
 }
 
 
-#ruless ul {
+#ruless ul, #resultss ul {
     list-style: none;
 }
 
-#rules-container {
+#rules-container, #results-container {
     font-size: 1.25rem;
     text-align: center;
     position: absolute;
-    display: none;
+    
 }
 
 li span {
