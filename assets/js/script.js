@@ -57,7 +57,6 @@ function showQuestion(question) {
         button.classList.add('btn')
         if (answer.correct) {
             button.dataset.correct = answer.correct
-            incrementScore(-1)
         }
         button.addEventListener('click', selectAnswer)
         answerButtons.appendChild(button)
