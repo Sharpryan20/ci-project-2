@@ -99,11 +99,12 @@ function setStatusClass(element, correct) {
     }
 }
 
-function restartGame() {
-    restartButton.onclick = function(event) {
-        resultsContainer.style.display = 'none';
-        startGame()
-    }
+restartButton.onclick = function(event) {
+    resultsContainer.style.display = 'none';
+    questionContainer.classList.add('hide')
+    resultsButton.classList.add('hide')
+    startButton.classList.remove('hide')
+    rulesButton.classList.remove('hide')
 }
 
 function incrementScore() {
