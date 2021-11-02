@@ -15,6 +15,7 @@ body {
     align-items: center;
     background: url('../images/piano.jpg');
 }
+/* Containers */
 
 .container, #rules-container, #results-container {
     width: 900px;
@@ -33,6 +34,8 @@ body {
     font-size: 2.5rem;
     text-align: center;
 }
+
+/* Styling for Buttons */
 
 .btn-grid {
     display: grid;
@@ -78,6 +81,8 @@ body {
     display: none;
 }
 
+/* Styling for Scores */
+
 #score {
     color: green;
     font-weight: bold;
@@ -90,6 +95,14 @@ body {
 
 #feedback-p {
     display: inline;
+}
+
+#feedback-correct {
+    color: green;
+}
+
+#feedback-wrong {
+
 }
 
 .correct {
@@ -117,6 +130,8 @@ body {
     text-align: center;
 }
 
+
+/* Rules and Results Styling */
 
 #ruless ul, #resultss ul {
     list-style: none;

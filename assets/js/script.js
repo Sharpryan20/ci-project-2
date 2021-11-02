@@ -110,15 +110,19 @@ function selectAnswer(e) {
     if (correct === "true"){
         incrementScore()
         feedbackText.innerText = "Correct!"
+        feedbackText.style.color = "green"
     }
     else {
         feedbackText.innerText = "Wrong!"
+        feedbackText.style.color = "red"
+
 
     }
     // Add CSS to all the buttons to highlight the wrong and correct answers
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    //shuffles the questions and displays next button unless there are no questions left, then it will showcase the results button
     if (jumbledQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hide') 
     } else {
