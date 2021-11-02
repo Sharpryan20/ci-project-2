@@ -97,14 +97,6 @@ body {
     display: inline;
 }
 
-#feedback-correct {
-    color: green;
-}
-
-#feedback-wrong {
-
-}
-
 .correct {
     background-color: green;
 }
