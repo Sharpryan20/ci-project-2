@@ -88,6 +88,10 @@ body {
     padding: 15px;
 }
 
+#feedback-p {
+    display: inline;
+}
+
 .correct {
     background-color: green;
 }
