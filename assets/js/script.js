@@ -10,21 +10,23 @@ const questionContainer = document.getElementById('question-container');
 const rulesContainer  = document.getElementById('rules-container');
 const resultsContainer = document.getElementById('results-container');
 
+const correctText = "correct"
+const wrongText = "wrong"
+
 const span = document.getElementsByClassName('close')[0];
 
-let jumble // Holds the randomized questions 
+let jumbledQuestions // Holds the randomizes questions
 let currentQuestion // Holds an index to the current question
-let currentScore = 0;
+let currentScore = 0
+
 const questionElement = document.getElementById('question')
 
-// =========== Call back Functions ==========
-
+// ============ Callback Functions ============
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestion++
     nextQuestion()
 })
-
 
 rulesButton.onclick = function() {
     rulesContainer.style.display = 'block';
@@ -45,46 +47,38 @@ restartButton.onclick = function() {
     startButton.classList.remove('hide')
     rulesButton.classList.remove('hide')
     currentScore = 0
-    document.getElementById('score').innerText = currentScore;
+    document.getElementById("score").innerText = currentScore;
 }
 
-// =========== Quiz Logic ============
+// ============ Quiz Logic ============
 
+/*
+Hides the start and rules buttons, randomizes the questions and moves on to the 
+first question
+*/
 
-/**
- * Hides the start and rules buttons, randomizes the question
- * moves on to the first question
- */
 function startGame() {
     startButton.classList.add('hide')
     rulesButton.classList.add('hide')
-    jumble = questions.sort(() => Math.random() - .5)
+    // Randomize the questions
+    jumbledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionContainer.classList.remove('hide')
     nextQuestion()
-
 }
-
-/**
- * Resets the state and shuffles a new question
- */
 
 function nextQuestion() {
     resetState()
-    showQuestion(jumble[currentQuestion])
+    showQuestion(jumbledQuestions[currentQuestion])
 }
 
-
-/**
- * This function gets the questions and answers from const[questions]
- * and displays them using the css styling of 'btn'.
- */
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
+        // Annotate the correct answer with datasets
         if (answer.correct) {
             button.dataset.correct = answer.correct
         }
@@ -98,29 +92,27 @@ function resetState() {
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild)
     }
-    document.getElementById('feedback-p').innerText = ""
+    document.getElementById("feedback-p").innerText = ""
 }
 
 function selectAnswer(e) {
     const selectButton = e.target
     const correct = selectButton.dataset.correct
-    let feedbackText = document.getElementById('feedback-p')
-
+    let feedbackText = document.getElementById("feedback-p")
     // Increment score if the answer is correct
-
     if (correct === "true"){
         incrementScore()
         feedbackText.innerText = "Correct!"
     }
     else {
         feedbackText.innerText = "Wrong!"
-    }
 
-    // Add CSS to all the buttons to highlight the correct and incorrect answers
+    }
+    // Add CSS to all the buttons to highlight the wrong and correct answers
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (jumble.length > currentQuestion + 1) {
+    if (jumbledQuestions.length > currentQuestion + 1) {
         nextButton.classList.remove('hide') 
     } else {
         displayResults()
@@ -128,24 +120,21 @@ function selectAnswer(e) {
 }
 
 function clearStatusClass(element) {
-   element.classList.remove('correct')
-   element.classList.remove('wrong') 
+   element.classList.remove(correctText)
+   element.classList.remove(wrongText) 
 }
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
-    element.classList.add(correct === 'true' ? correctText : wrongText)
+    element.classList.add(correct === "true" ? correctText : wrongText)
 }
 
 function displayResults() {
-    document.getElementById('score-h3').innerText = currentScore
+    document.getElementById("score-h3").innerText = currentScore
     resultsButton.classList.remove('hide')
 }
 
 function incrementScore() {
-
     currentScore++
-    document.getElementById("score").innerText = ++currentScore;
-
+    document.getElementById("score").innerText = currentScore;
 }
-
