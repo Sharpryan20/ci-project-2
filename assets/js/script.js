@@ -52,10 +52,10 @@ restartButton.onclick = function() {
 
 // ============ Quiz Logic ============
 
-/*
-Hides the start and rules buttons, randomizes the questions and moves on to the 
-first question
-*/
+/**
+ * Hides the start and rules buttons, randomizes the question
+ * moves on to the first question
+ */
 
 function startGame() {
     startButton.classList.add('hide')
@@ -67,11 +67,18 @@ function startGame() {
     nextQuestion()
 }
 
+/**
+ * Resets the state and shuffles a new question
+ */
 function nextQuestion() {
     resetState()
     showQuestion(jumbledQuestions[currentQuestion])
 }
 
+/**
+ * This function gets the questions and answers from const[questions]
+ * and displays them using the css styling of 'btn'.
+ */
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
