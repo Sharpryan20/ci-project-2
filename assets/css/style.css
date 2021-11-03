@@ -221,16 +221,22 @@ li span {
         font-size: 1.1rem;
     }
 
-    .next-btn {
-        
-    }
-
     #heading {
         font-size: 1.1rem;
     }
 
     #question {
         font-size: 1.1rem;
+    }
+
+    #results h1 {
+        font-size: 1.4rem;
+    }
+
+    
+
+    div#resultss ul li {
+        font-size: 0.9rem;
     }
 }
 
