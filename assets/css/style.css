@@ -31,7 +31,7 @@ body {
 }
 
 #question {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     text-align: center;
 }
 
@@ -46,7 +46,7 @@ body {
 
 .btn {
     gap: 15px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border: 1px solid rgb(219, 185, 71);
     background-color: rgb(238, 207, 106);
     border-radius:  15px;
@@ -91,6 +91,12 @@ body {
 .scores {
     display: inline-block;
     padding: 15px;
+}
+
+.feedback-p-class {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
 }
 
 #feedback-p {
@@ -175,6 +181,22 @@ li span {
     #rules-container {
         font-size: 1rem;
     }
+
+    #heading {
+        font-size: 1.5rem;
+    }
+
+    #question {
+        font-size: 1.5rem;
+    }
+
+    .btn-grid {
+       grid-template-columns: 1fr;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+    }
     
 }
 
@@ -183,6 +205,27 @@ li span {
 @media screen and (max-width: 320px) {
     #rules-container {
         font-size: 0.9rem;
+    }
+
+    .scores {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .feedback-p-class {
+        font-size: 0rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    #heading {
+        font-size: 1.3rem;
+    }
+
+    #question {
+        font-size: 1.2rem;
     }
 }
 

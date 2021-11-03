@@ -106,6 +106,7 @@ function selectAnswer(e) {
     const selectButton = e.target
     const correct = selectButton.dataset.correct
     let feedbackText = document.getElementById("feedback-p")
+    feedbackText.classList.add('feedback-p-class')
     // Increment score if the answer is correct
     if (correct === "true"){
         incrementScore()
