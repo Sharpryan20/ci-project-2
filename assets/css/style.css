@@ -200,9 +200,9 @@ li span {
     
 }
 
-/* media queries for devices sized 320px wide and down */
+/* media queries for devices sized 400px wide and down */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     #rules-container {
         font-size: 0.9rem;
     }
