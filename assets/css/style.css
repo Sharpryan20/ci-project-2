@@ -182,9 +182,20 @@ li span {
     }
 }
 
+@media screen and (max-width: 540px) {
+    div#resultss ul li {
+        font-size: 1.2rem;
+    }
+
+    #results-h1 h1, #results-h2 h2 {
+        font-size: 1.6rem;
+    }
+}
+
 /* media queries for devices sized 500px wide and down */
 
 @media screen and (max-width: 500px) {
+
     #rules-container {
         font-size: 1rem;
     }
