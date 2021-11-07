@@ -133,9 +133,6 @@ body {
     text-align: center;
 }
 
-
-
-
 /* Rules and Results Styling */
 
 #ruless ul, #resultss ul {
@@ -172,6 +169,10 @@ li span {
     text-align: center;
 }
 
+div#ruless ul li, div#resultss ul li{
+    margin: 20px;
+}
+
 /* Media Queries */
 
 /* media queries for devices 815 px and up */
@@ -187,9 +188,7 @@ li span {
         font-size: 1.2rem;
     }
 
-    #results-h1 h1, #results-h2 h2 {
-        font-size: 1.6rem;
-    }
+    
 }
 
 /* media queries for devices sized 500px wide and down */
