@@ -5,7 +5,6 @@ const rulesButton = document.getElementById('rules-btn');
 const answerButtons = document.getElementById('answer-buttons');
 const resultsButton = document.getElementById('results-btn');
 
-const container = document.getElementsByClassName('container');
 const questionContainer = document.getElementById('question-container');
 const rulesContainer  = document.getElementById('rules-container');
 const resultsContainer = document.getElementById('results-container');
@@ -61,7 +60,7 @@ function startGame() {
     startButton.classList.add('hide');
     rulesButton.classList.add('hide');
     // Randomize the questions
-    jumbledQuestions = questions.sort(() => Math.random() - .5);
+    jumbledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestion = 0;
     questionContainer.classList.remove('hide');
     nextQuestion();
@@ -134,7 +133,7 @@ function selectAnswer(e) {
 function clearStatusClass(element) {
    element.classList.remove(correctText);
    element.classList.remove(wrongText);
-};
+}
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -142,13 +141,13 @@ function setStatusClass(element, correct) {
 }
 
 function displayResults() {
-    document.getElementById("score-h3").innerText = currentScore
-    resultsButton.classList.remove('hide')
+    document.getElementById("score-h3").innerText = currentScore;
+    resultsButton.classList.remove('hide');
 }
 /**
  * Increase Score when answer is correct 
  */
 function incrementScore() {
-    currentScore++
+    currentScore++;
     document.getElementById("score").innerText = currentScore;
 }

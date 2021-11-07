@@ -134,4 +134,4 @@ const questions = [
             { text:'Fleetwood Mac', correct: false}
         ]
     },
-]
+];
