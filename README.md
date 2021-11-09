@@ -97,6 +97,34 @@ I chose this color palette because it connects to the theme of music, like an ol
 
 * In future I would like to create more categories and different types of quizzes to keep the user entertained and coming back.
 
+# Features 
+
+## Existing features 
+
+* All content appears within containers. the containers all have max-width to make sure they fit no matter the screen size.
+
+* The buttons on the home page will help users navigate through the quiz. 
+
+![Home Buttons](assets/images/readme-images/homebuttons.png)
+
+### Header 
+
+* The logo 'Face The Music' is large which immediately fraws the users attention away from the background image to the container which contains the entire quiz itself.
+
+![Header](assets/images/readme-images/header.png)
+
+### Results Box 
+
+* Throughout the quiz the users score is counted and then displayed at the end on the results box. The user can then see how well they have done from the list below.
+
+![Results](assets/images/readme-images/resultsboximage.png)
+
+### Answer buttons 
+
+* When the user clicks an answer the colors of all the choices will change color depending on if choice is correct or not.
+
+![Answer Buttons](assets/images/readme-images/quizboxanswers.png)
+
 
 
 
