@@ -119,12 +119,49 @@ I chose this color palette because it connects to the theme of music, like an ol
 
 ![Results](assets/images/readme-images/resultsboximage.png)
 
-### Answer buttons 
+### Answer
+
+* When a question is answered correctly, the score in the middle wil increment by 1.
 
 * When the user clicks an answer the colors of all the choices will change color depending on if choice is correct or not.
 
-![Answer Buttons](assets/images/readme-images/quizboxanswers.png)
+![Answer Buttons](assets/images/readme-images/quizboximage.png)
 
+* As well as the color changes to all the options, either a 'Correct!' or 'Wrong!' text will appear next to the score count. 
+
+## Future Features
+
+* Rather than clicking the start button and it loads straight into the quiz, it loads into a another section which you can find mulitple different quzzies. 
+
+* Add additional quzzies including different genres, specific artists, specific time periods.
+ 
+* Add the ability to write your username and a highscore section so users can track not only their scores but other users.
+
+# Technologies used
+
+## Languages Used
+
+* [HTML:](https://www.w3.org/html/)  - HTMl5 provided the content and the structure of my website.
+
+* [CSS:](https://www.w3.org/Style/CSS/) - CSS was used to style all my pages.
+
+* [JS:](https://en.wikipedia.org/wiki/JavaScript) - Programming language used for the function and interactivity behind the quiz.
+
+## Frameworks, Libraries and Programs used:
+
+* [Google Fonts:](https://fonts.google.com/) - Google fonts was used to import my font for my Title.
+
+* [Git](https://git-scm.com/) - Git was used for version control. Allowing me to create backups whenever significant changes were made to code by utilizing the gitpod terminal to commit to Git and Push to GitHub.
+
+* [GitHub:](https://github.com/) - GitHub was used to externally hold my repository. Will also use GitHub pages to deploy my website.
+
+* [Balsamiq:](https://balsamiq.com/) - Balsamiq was used tp create wireframes during the designing process.
+
+* [Coolors](https://coolors.co/) - Coolors was used to help design my colour palette for the website.
+
+* [Favicon](https://favicon.io/) - Favicon used to implement a favicon on the browser tab.
+
+* [Pexels](https://www.pexels.com/search/music/) - Pexels used to find my background image.
 
 
 
