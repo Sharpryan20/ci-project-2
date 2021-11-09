@@ -29,23 +29,74 @@ The site is fully responsive on all devices and the site is generated through HT
 * As a user, I want to be able to access the website on desktop, tablet and mobile devices to ensure convenience.
 
 
-## Returning visitor goals
+## Returning visitor goals:
 
 * As a returning visitor I would like to be able to keep track of my progress and be able to check my high scores in future.
 * I want to be able to play different quzzies of all types.
 
-## Target Audience
+## Target Audience:
 
 My target auidence is anyone who:
 
 * Has a passion for Muisc.
 * Likes to face a challenge.
 
-# Design:
+# Skeleton
 
-## Color Scheme 
+## Wireframes
+
+All initial mockups of my site were created and desinged using Balsamiq. Images of my mockups will be below.
+
+### Start up page
+
+![Start Up Page](assets/images/readme-images/startupframe.png)
+
+### Rules Box
+
+![Rules Box](assets/images/readme-images/rulesframe.png)
+
+### Quiz Box 
+
+![Quiz Box](assets/images/readme-images/quizboxframe.png)
+
+### Phone 
+
+![Phone Box Frame](assets/images/readme-images/phoneframe.png)
+
+# Surface 
+
+## Imagery 
+
+I only used one Image throughout the whole site but it stays in place the entire time. The image really higlights the entire purpose and interest of the quiz. 
+
+![Hero Image](assets/images/piano.jpg)
+
+## Design
+
+### Color Scheme: 
 
 ![design](assets/images/readme-images/palette.png)
+
+The site's primary colors are cream, yellow and brown. The above image shows the exact shades that I used to build up my website.
+
+I chose this color palette because it connects to the theme of music, like an old rustic piano or an old music sheet. I decided to use black for the text as it works well against the light backgrounds.
+
+## Layout/Structure:
+
+* The quiz itself and all the pop up boxes were generated through JavaScript.
+
+* The sites layout is very simplistic to the viewers eyes when they first enter the site. The singular image adds depth and immediately draws the users attention to the start up menu. 
+
+* The users are initally greeted with the title 'Face the Music' and two buttons; 'Start' and 'Rules'.
+
+* If the user clicks on the rules button it will load up and box and it will explain to the user how to play the game.
+
+* When the user clicks the start button the user will be presented with a question that is randomly generated from 15 questions and will be required to pick an answer out of 4 choices.
+
+* When the user cycles through all the questions they will recieve another pop up box, just like the rules box but this time it will bring up their results and place them in a category.
+
+* In future I would like to create more categories and different types of quizzes to keep the user entertained and coming back.
+
 
 
 
