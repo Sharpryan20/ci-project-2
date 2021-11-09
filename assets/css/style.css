@@ -221,7 +221,7 @@ div#ruless ul li, div#resultss ul li{
 
 @media screen and (max-width: 420px) {
     #rules-container {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .scores {
