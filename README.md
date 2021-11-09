@@ -163,6 +163,68 @@ I chose this color palette because it connects to the theme of music, like an ol
 
 * [Pexels](https://www.pexels.com/search/music/) - Pexels used to find my background image.
 
+# Testing
+
+## Manual testing
+
+Testing was conducted frequently throughout the development of the site. I had a constant Live preview of the site side-by-side to my code so I was aware of any immediate changes to my code and was able to change and alter my code in dev tools before implementing it into my actual code on GitPod.
+
+I tested the responsiveness on through console tools and on different browsers, with Google Chrome being my default browser.
+
+I got friends of mine to test my site on their devices so I was able to gather a range of different data.
+
+Lighthouse reports were also conducted frequently to ensure the site was preforming well. I have an image of the final lighthouse report that I completed on my site.
+
+![Lighthouse](assets/images/readme-images/lighthouse.png)
+
+## Automatic testing
+
+All three languages that were used in the project where ran through validators to ensure there were no problems or errors with my code.
+
+### HTML validator
+
+![HTML validator](assets/images/readme-images/html-validator.png)
+
+### CSS validator
+
+![CSS validator](assets/images/readme-images/css-validator.png)
+
+
+### JS validator
+
+![JS validator](assets/images/readme-images/jshint.png)
+
+## Bugs
+
+When first trying to implement the increment score function, I came across a few times that it would increase the score no matter if the question was answered correctly. Sometimes it would also increase it but by mire than 1 point. I realised that I was calling the 'IncrementScore' function in the wrong function.
+
+# Deployment 
+
+## GitHub Pages 
+
+I deployed this site through GitHub pages. This was a simple process, as follows:
+
+-   Log into GitHub
+    
+-   Go to the repository
+
+-   Go to settings
+    
+-   Scroll down to "GitHub Pages" section
+    
+-   Select the source (I chose master branch in this instance)
+    
+-   After some time, the site will be deployed and ready to see.
+
+# Credits
+
+* Thanks to my mentor Reuben Ferrante,for all his support throughout the project. 
+
+* Youtube channel 'Web Dev Simplified', specifically this [video](httSps://www.youtube.com/watch?v=riDzcEQbX6k), which helped me kickstart my project. I used snippets of code from this video in my own project.
+
+# Thanks
+
+
 
 
 
